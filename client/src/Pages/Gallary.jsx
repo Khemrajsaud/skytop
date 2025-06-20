@@ -7,7 +7,7 @@ const Gallery = () => {
   useEffect(() => {
     const fetchGallery = async () => {
       try {
-        const res = await axios.get("https://skytop.onrender.com/api/gallery/");
+        const res = await axios.get("http://localhost:5000/api/gallery");
         setImages(res.data);
       } catch (err) {
         console.error("Error loading gallery images:", err);
