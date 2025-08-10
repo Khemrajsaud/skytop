@@ -1,58 +1,3 @@
-// import { useState } from "react";
-
-// import AddProgramForm from "./AddProgramForm";
-// import UploadToCloudinary from "./UploadToCloudinary";
-// import ImageCategory from "./ImageCategory";
-// import ProgramCategory from "./ProgramCategory";
-
-// const AdminPanel = () => {
-//   const [activeSection, setActiveSection] = useState(""); // Track active section
-
-//   const adminData = [
-//     // { title: "Adminal Panel", content: "Admin Panel" },
-
-  
-//     { title: "Add Program", content: <AddProgramForm /> },
-//     { title: "upload image", content: <UploadToCloudinary /> },
-//     { title: "Image Category", content: <ImageCategory /> },
-//     { title: "Program Category", content: <ProgramCategory /> },
-//   ];
-
-//   return (
-//     <div className="flex  ">
-//       {/* Sidebar */}
-//       <div className="w-[220px] bg-gray-500 text-white flex flex-col items-start  p-4">
-//         {adminData.map((item, index) => (
-//           <button
-//             key={index}
-//             onClick={() => setActiveSection(item.title)}
-//             className={`px-4 py-2 mb-2 hover:bg-gray-600 rounded  ${
-//               activeSection === item.title ? "bg-gray-600" : ""
-//             }`}
-//           >
-//             {item.title}
-//           </button>
-//         ))}
-//       </div>
-
-//       {/* Main Content Area */}
-
-//       <div className="flex-1 bg-white p-6 mt-6 w-full">
-      
-//         {activeSection === "Add Program" && <AddProgramForm />}
-//         {activeSection === "upload image" && <UploadToCloudinary />}
-//         {activeSection === "Image Category" && <ImageCategory />}
-//         {activeSection === "Program Category" && <ProgramCategory />}
-//         {activeSection === "" && (
-//           <div className="text-gray-500 h-screen">Select a section from the sidebar</div>
-//         )}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default AdminPanel;
-
 
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -62,6 +7,8 @@ import ImageCategory from "./ImageCategory";
 import ProgramCategory from "./ProgramCategory";
 import { toast } from "react-toastify";
 import { jwtDecode } from "jwt-decode";
+import AddBlog from "./AddBlog";
+import BlogCategory from "./BlogCategory";
 
 const AdminPanel = () => {
   const [activeSection, setActiveSection] = useState("");
@@ -73,6 +20,8 @@ const AdminPanel = () => {
     { title: "Upload Image", content: <UploadToCloudinary /> },
     { title: "Image Category", content: <ImageCategory /> },
     { title: "Program Category", content: <ProgramCategory /> },
+    {title : "Add Blog", content: <AddBlog/>},
+     {title : "Blog Category", content: <BlogCategory/>}
   ];
 
   // ✅ Decode JWT on mount to get admin email

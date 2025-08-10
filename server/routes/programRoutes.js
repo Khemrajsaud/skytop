@@ -19,7 +19,7 @@ router.post("/upload", upload.single("file"), async (req, res) => {
     const dataURI = `data:${req.file.mimetype};base64,${b64}`;
 
     const result = await cloudinary.uploader.upload(dataURI, {
-      folder: "programs", // Ensure it's not the gallery folder
+      folder: "programs", 
     });
 
     const newProgram = await Program.create({

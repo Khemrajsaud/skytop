@@ -1,128 +1,131 @@
-import "react";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaLinkedinIn,
-  FaYoutube,
-} from "react-icons/fa";
+// import  "react";
+// import {
+//   FaFacebookF,
+//   FaTwitter,
+//   FaLinkedinIn,
+//   FaInstagram,
+// } from "react-icons/fa";
 
-const Footer = () => {
-  return (
-    <div className="bg-gradient-to-b from-sky-400 to-sky-100 text-gray-700 py-10 px-6">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl font-bold text-gray-800 text-center">Skytop Academy</h2>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10 text-center md:text-left">
-          <div>
-            <h3 className="font-semibold">Product</h3>
-            <ul className="mt-2 space-y-1 text-sm">
-              <li>Features</li>
-              <li>Pricing</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-semibold">Resources</h3>
-            <ul className="mt-2 space-y-1 text-sm">
-              <li>Blog</li>
-              <li>User guides</li>
-              <li>Webinars</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-semibold">Company</h3>
-            <ul className="mt-2 space-y-1 text-sm">
-              <li>About us</li>
-              <li>Contact us</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-semibold">Plans & Pricing</h3>
-            <ul className="mt-2 space-y-1 text-sm">
-              <li>Personal</li>
-              <li>Startup</li>
-              <li>Organization</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="mt-8 border-t pt-6 flex flex-col md:flex-row items-center justify-between">
-          <p className="text-sm text-center md:text-left">
-            &copy; 2024 Skytop, Inc. &bull; Privacy &bull; Terms &bull; Sitemap
-          </p>
-          <div className="flex space-x-4 mt-4 md:mt-0">
-            <FaTwitter className="text-gray-600 hover:text-blue-500 cursor-pointer text-lg" />
-            <a
-              href="https://www.facebook.com/profile.php?id=61558281991316"
-              className=""
-            >
-              <FaFacebookF className="text-gray-600 hover:text-blue-500 cursor-pointer text-lg" />
-            </a>
-            <a
-              href="https://www.linkedin.com/company/skytop-academy/posts/?feedView=all"
-              className=""
-            >
-              <FaLinkedinIn className="text-gray-600 hover:text-blue-500 cursor-pointer text-lg" />
-            </a>
-            <FaYoutube className="text-gray-600 hover:text-red-500 cursor-pointer text-lg" />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Footer;
-
-
-
-// import { FaLinkedinIn, FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
-
-// export default function Footer() {
+// const Footer = () => {
 //   return (
-//     <footer className=" bg-sky-500 text-gray-700 px-8 py-12">
-//       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
-        
-//         {/* Column 1: Logo & Copyright */}
+//     <footer className="bg-gray-900 text-white py-16 px-[10%]">
+//       <div className="grid md:grid-cols-4 gap-10">
+//         {/* Brand Info */}
 //         <div>
-//           <div className="flex items-center gap-2">
-//             <div className=" p-1 rounded">
-//               <span className="text-blue-600 font-bold text-3xl">SkyTop</span>
-//             </div>
-//             <h2 className="text-3xl font-bold">Academy</h2>
-          
+//           <h3 className="text-2xl font-bold mb-4">TechVision</h3>
+//           <p className="text-sm text-gray-400 mb-4">
+//             Building modern, scalable digital solutions for startups & enterprises.
+//           </p>
+//           <div className="flex gap-3 mt-4">
+//             <FaFacebookF className="hover:text-blue-400 cursor-pointer" />
+//             <FaTwitter className="hover:text-blue-400 cursor-pointer" />
+//             <FaLinkedinIn className="hover:text-blue-400 cursor-pointer" />
+//             <FaInstagram className="hover:text-blue-400 cursor-pointer" />
 //           </div>
-//           <p className=" text-0.80xl text-gray-800 mt-6">© Nepware 2025. All rights reserved.</p>
-//           <a href="#" className="text-sm text-blue-400 underline mt-2 inline-block">Privacy Policy</a>
 //         </div>
 
-//         {/* Column 2: Links */}
+//         {/* Navigation Links */}
 //         <div>
-//           <h3 className="font-semibold mb-3 text-gray-900">LINKS</h3>
-//           <ul className="space-y-2 text-gray-900">
-//             <li><a href="#">Services</a></li>
-//             <li><a href="#">Work</a></li>
-//             <li><a href="#">About</a></li>
-//             <li><a href="#">Careers</a></li>
-//             <li><a href="#">Contact Us</a></li>
+//           <h4 className="text-xl font-semibold mb-4">Navigation</h4>
+//           <ul className="text-gray-400 text-sm space-y-2">
+//             <li className="hover:text-white cursor-pointer">Home</li>
+//             <li className="hover:text-white cursor-pointer">About Us</li>
+//             <li className="hover:text-white cursor-pointer">Services</li>
+//             <li className="hover:text-white cursor-pointer">Contact</li>
 //           </ul>
 //         </div>
 
-//         {/* Column 3: Office & Social Media */}
+//         {/* Services */}
 //         <div>
-//           <h3 className="font-semibold mb-3 text-gray-900">OFFICE</h3>
-//           <p className="text-gray-900 mb-5">Kathmandu, Nepal</p>
-
-//           <h3 className="font-semibold mb-3 text-gray-900">FOLLOW US ON</h3>
-//           <div className="flex space-x-4 text-black text-lg">
-//             <a href="#"><FaLinkedinIn /></a>
-//             <a href="#"><FaFacebookF /></a>
-//             <a href="#"><FaTwitter /></a>
-//             <a href="#"><FaInstagram /></a>
-//           </div>
+//           <h4 className="text-xl font-semibold mb-4">Our Services</h4>
+//           <ul className="text-gray-400 text-sm space-y-2">
+//             <li className="hover:text-white cursor-pointer">Web Development</li>
+//             <li className="hover:text-white cursor-pointer">Mobile Apps</li>
+//             <li className="hover:text-white cursor-pointer">UI/UX Design</li>
+//             <li className="hover:text-white cursor-pointer">Cloud Solutions</li>
+//           </ul>
 //         </div>
-        
+
+//         {/* Contact Info */}
+//         <div>
+//           <h4 className="text-xl font-semibold mb-4">Contact Us</h4>
+//           <p className="text-gray-400 text-sm">
+//             Kathmandu, Nepal <br />
+//             +977-9800000000 <br />
+//             info@techvision.com
+//           </p>
+//         </div>
+//       </div>
+
+//       {/* Bottom Line */}
+//       <div className="border-t border-gray-700 mt-12 pt-6 text-center text-gray-500 text-sm">
+//         © {new Date().getFullYear()} TechVision. All rights reserved.
 //       </div>
 //     </footer>
 //   );
-// }
+// };
+
+// export default Footer;
+
+
+
+import  "react";
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+
+export default function Footer() {
+  return (
+    <footer className="bg-gray-900 text-gray-300">
+      <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        {/* About */}
+        <div>
+          <h3 className="text-lg font-bold text-white mb-4">About Our University</h3>
+          <p className="text-sm leading-relaxed">
+            We are committed to providing world-class education, cutting-edge research, 
+            and an inclusive environment for students across the globe.
+          </p>
+        </div>
+
+        {/* Quick Links */}
+        <div>
+          <h3 className="text-lg font-bold text-white mb-4">Quick Links</h3>
+          <ul className="space-y-2 text-sm">
+            <li><a href="/" className="hover:text-white">Home</a></li>
+            <li><a href="/about" className="hover:text-white">About Us</a></li>
+            <li><a href="/programs" className="hover:text-white">Programs</a></li>
+            <li><a href="/careers" className="hover:text-white">Careers</a></li>
+            <li><a href="/contact" className="hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+
+        {/* Contact Info */}
+        <div>
+          <h3 className="text-lg font-bold text-white mb-4">Contact Us</h3>
+          <ul className="space-y-2 text-sm">
+            <li>123 Academic Street</li>
+            <li>Knowledge City, Education State</li>
+            <li>Email: info@university.com</li>
+            <li>Phone: +1 234 567 890</li>
+          </ul>
+        </div>
+
+        {/* Social Media */}
+        <div>
+          <h3 className="text-lg font-bold text-white mb-4">Follow Us</h3>
+          <div className="flex space-x-4">
+            <a href="#" className="hover:text-white"><FaFacebookF /></a>
+            <a href="#" className="hover:text-white"><FaTwitter /></a>
+            <a href="#" className="hover:text-white"><FaInstagram /></a>
+            <a href="#" className="hover:text-white"><FaLinkedinIn /></a>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="bg-gray-800 py-4 text-center text-sm border-t border-gray-700">
+        © {new Date().getFullYear()} Your University Name. All Rights Reserved.
+      </div>
+    </footer>
+  );
+}
 

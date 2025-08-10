@@ -36,29 +36,34 @@ const Contact = () => {
             type="text"
             name="user_name"
             placeholder="Enter Your Name"
+            required
             className=" outline-none border border-blue-600 p-3 rounded-md w-full"
           />
           <input
             type="email"
             placeholder="Enter Your Email"
                name="user_email"
+               required
             className=" outline-none border  border-blue-600 p-3 rounded-md w-full"
           />
           <input
             type="text"
             placeholder="Enter Your Address"
                name="user_address"
+               required
             className="outline-none border  border-blue-600 p-3 rounded-md w-full"
           />
           <input
             type="text"
             placeholder="Enter Your Number"
                name="user_number"
+              required
             className="outline-none border  border-blue-600 p-3 rounded-md w-full"
           />
           <textarea
             placeholder="Your Message"
                name="user_message"
+               required
             className="outline-none border  border-blue-600 p-3 rounded-md w-full h-24"
           ></textarea>
           <button

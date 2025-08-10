@@ -47,14 +47,13 @@ const ImageCategory = () => {
     }
   };
 
-  // Toggle edit mode for a specific image
   const toggleEdit = (id, currentTitle) => {
     if (!editingIds[id]) {
       // Enable edit mode
       setEditTitles((prev) => ({ ...prev, [id]: currentTitle || "" }));
       setEditingIds((prev) => ({ ...prev, [id]: true }));
     } else {
-      // Save on second click
+   
       handleSave(id);
     }
   };

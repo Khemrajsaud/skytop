@@ -7,6 +7,7 @@ import authRouth from "./routes/authRoutes.js"
 
 import galleryRoutes from "./routes/galleryRoutes.js";
 import programRoutes from "./routes/programRoutes.js"
+import blog from "./routes/blog.js";
 
 
 // Initialize environment variables
@@ -31,8 +32,11 @@ app.use("/api/auth", authRouth)
 
 app.use("/api/gallery", galleryRoutes);
 app.use("/api/program", programRoutes)
+app.use("/api/blog",blog )
 
-// Start server
+
+
+
 app.listen(PORT, () => {
   console.log(`App is running at ${PORT}`);
 });

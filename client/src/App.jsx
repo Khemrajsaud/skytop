@@ -54,7 +54,6 @@ import Home from "./Pages/Home";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import About from "./Pages/About";
-import Blogs from "./Pages/Blogs";
 import Gallary from "./Pages/Gallary";
 import Contact from "./Pages/Contact";
 import Teams from "./Pages/Teams";
@@ -63,6 +62,8 @@ import AdminLogin from "./Pages/AdminLogin";
 import AdminPanel from "./Pages/AdminPanel";
 import ProtectedRoute from "./Components/ProtectedRoute";
 import { useLocation } from "react-router-dom";
+import Blog from "./Pages/Blog";
+import Career from "./Pages/Career";
 
 const App = () => {
    const location = useLocation();
@@ -74,12 +75,14 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/about" element={<About />} />
-        <Route path="/blogs" element={<Blogs />} />
+       <Route path="/blogs" element={<Blog/>}/>
         <Route path="/gallery" element={<Gallary />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/teams" element={<Teams />} />
         <Route path="/programs" element={<Program />} />
         <Route path="/admin-login" element={<AdminLogin />} />
+        <Route path="/career" element={<Career/>}/>
+        
         <Route path="/admin" element={
           <ProtectedRoute>
             <AdminPanel />
